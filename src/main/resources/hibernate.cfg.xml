@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- required fields -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!--property name="hibernate.connection.datasource">java:comp/env/jdbc/aurora</property-->
+		<property name="hibernate.show_sql">true</property>
+
+		<!-- optional fields -->
+		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+
+		<!-- please add entity classes here -->
+		<mapping class="jp.gr.java_conf.hangedman.models" />
+	</session-factory>
+</hibernate-configuration>
