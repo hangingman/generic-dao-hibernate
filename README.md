@@ -29,7 +29,7 @@ $ mvn flyway:migrate -Dflyway.configFile=flyway.properties
 $ sh -c "mvn jetty:run &"
 ```
 
-* Please find API documents page at http://localhost:8080/
+* Please find API documents page at http://localhost:8080/rest/v1/employee 
 
 ### Software information
 
@@ -49,15 +49,6 @@ $ sh -c "mvn jetty:run &"
 * **Lombok** for generating Getter/Setter
 
     * Using version higher than 1.16.x **(see pom.xml also)**
-
-* **Swagger** for generating documents
-
-    * Using version 1.5.10
-
-* **Swagger-UI** to see pretty documents as HTML
-
-    * See, https://github.com/swagger-api/swagger-ui/releases/tag/v2.2.6
-    * Using version 2.2.6
 
 ### Deploy it to Heroku (just for reference)
 
