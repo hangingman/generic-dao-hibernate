@@ -3,6 +3,28 @@
 <web-app>
 	<display-name>Demo - Generic Dao with Hibernate</display-name>
 
+	<!-- REST API context -->
+	<servlet>
+		<servlet-name>v1</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+
+		<!-- main REST API -->
+		<init-param>
+			<param-name>javax.ws.rs.Application</param-name>
+			<param-value>jp.gr.java_conf.hangedman.rest.RestContextV1</param-value>
+		</init-param>
+		<init-param>
+			<param-name>log4j-properties-location</param-name>
+			<param-value>WEB-INF/log4j.properties</param-value>
+		</init-param>
+
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>v1</servlet-name>
+		<url-pattern>/rest/v1/*</url-pattern>
+	</servlet-mapping>
+
 	<!-- Required for Spring4, applicationContext.xml -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

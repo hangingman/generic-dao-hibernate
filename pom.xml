@@ -181,11 +181,17 @@
 		</dependency>
 
 		<!-- ActiveJDBC to JAXB -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.fasterxml.jackson.module</groupId> -->
+<!-- 			<artifactId>jackson-module-jaxb-annotations</artifactId> -->
+<!-- 			<version>2.4.0</version> -->
+<!-- 		</dependency> -->
 		<dependency>
-			<groupId>com.fasterxml.jackson.module</groupId>
-			<artifactId>jackson-module-jaxb-annotations</artifactId>
-			<version>2.4.0</version>
-		</dependency>
+		    <groupId>javax.xml.bind</groupId>
+		    <artifactId>jaxb-api</artifactId>
+		    <version>2.2.11</version>
+		</dependency>		
+		
 		<!-- MySQL driver -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -205,13 +211,6 @@
 			<version>3.0</version>
 		</dependency>
 
-		<!-- swagger (for API doc) -->
-		<!-- https://github.com/swagger-api/swagger-core/wiki/Swagger-Core-Jersey-2.X-Project-Setup-1.5 -->
-		<dependency>
-			<groupId>io.swagger</groupId>
-			<artifactId>swagger-jersey2-jaxrs</artifactId>
-			<version>1.5.10</version>
-		</dependency>
 		<dependency>
 			<groupId>com.github.jsimone</groupId>
 			<artifactId>webapp-runner</artifactId>
