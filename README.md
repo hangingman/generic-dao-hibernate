@@ -1,4 +1,4 @@
-### How to start
+### generic-dao-hibernate [![Build Status](https://travis-ci.org/Hiroyuki-Nagata/generic-dao-hibernate.svg?branch=master)](https://travis-ci.org/Hiroyuki-Nagata/generic-dao-hibernate)
 
 * Please use `Maven2` basically
 
