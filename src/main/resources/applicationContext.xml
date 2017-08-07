@@ -33,8 +33,7 @@
 	</bean>
 
 	<!-- sessionFactory -->
-	<bean id="mySessionFactory"
-		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+	<bean id="mySessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource" />
 		<property name="packagesToScan" value="jp.gr.java_conf.hangedman.models" />
 		<property name="hibernateProperties">
@@ -51,16 +50,14 @@
 
 	<!-- transactionManager -->
 	<tx:annotation-driven />
-	<bean id="transactionManager"
-		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 
 	<!-- for Jersey -->
 	<bean class="jp.gr.java_conf.hangedman.util.SpringApplicationContext"></bean>
 
-	<bean id="abstractDaoTarget" class="jp.gr.java_conf.hangedman.dao.GenericDaoHibernateImpl"
-		abstract="true">
+	<bean id="abstractDaoTarget" class="jp.gr.java_conf.hangedman.dao.GenericDaoHibernateImpl" abstract="true">
 		<property name="sessionFactory">
 			<ref bean="mySessionFactory" />
 		</property>

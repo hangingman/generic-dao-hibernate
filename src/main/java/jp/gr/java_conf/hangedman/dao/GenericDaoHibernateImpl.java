@@ -7,15 +7,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import lombok.Setter;
 
 public class GenericDaoHibernateImpl<T, PK extends Serializable> implements GenericDao<T, PK> {
 
 	private Class<T> type;
 
 	@Autowired
-	@Setter
 	private SessionFactory sessionFactory;
+
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
 
 	public GenericDaoHibernateImpl(Class<T> type) {
 		this.type = type;
