@@ -80,4 +80,19 @@
 			</bean>
 		</property>
 	</bean>
+
+	<bean id="departmentsDao" parent="abstractDao">
+		<!-- You need to configure the interface for Dao -->
+		<property name="proxyInterfaces">
+			<value>jp.gr.java_conf.hangedman.dao.DepartmentsDao</value>
+		</property>
+		<property name="target">
+			<bean parent="abstractDaoTarget">
+				<constructor-arg>
+					<value>jp.gr.java_conf.hangedman.models.Departments</value>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean>
+
 </beans>
