@@ -1,8 +1,6 @@
 --
 -- SQLs from https://www.ntu.edu.sg/home/ehchua/programming/sql/SampleDatabases.html
 --
-USE sample;
-
 INSERT INTO `dept_manager` (`emp_no`, `dept_no`, `from_date`, `to_date`) 
 VALUES 
 (110022,'d001','1985-01-01','1991-10-01'),

@@ -5,15 +5,13 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.*;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -35,17 +33,16 @@ public class Employees implements Serializable {
 
 	@Column(name = "birth_date")
 	private Date birthDate;
-	
+
 	@Column(name = "first_name")
 	private String firstName;
-	
+
 	@Column(name = "last_name")
 	private String lastName;
-	
+
 	@Column(name = "gender")
-	@Enumerated(EnumType.STRING)
-	private Gender gender;
-	
+	private String gender;
+
 	@Column(name = "hire_date")
 	private Date hireDate;
 }

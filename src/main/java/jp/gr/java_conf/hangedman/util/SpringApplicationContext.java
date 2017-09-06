@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContextAware;
 /**
  * @see https://www.mkyong.com/webservices/jax-rs/resteasy-spring-integration-example/
  * @author Hiroyuki.Nagata
+ *
  * This class will provide Spring bean classes for Jersey's service classes
  */
 public class SpringApplicationContext implements ApplicationContextAware {

@@ -1,14 +1,12 @@
 --
 -- SQLs from https://www.ntu.edu.sg/home/ehchua/programming/sql/SampleDatabases.html
 --
-USE sample;
-
 CREATE TABLE employees (
     emp_no      INT             NOT NULL,  -- UNSIGNED AUTO_INCREMENT??
     birth_date  DATE            NOT NULL,
-    first_name  VARCHAR(14)     NOT NULL,
-    last_name   VARCHAR(16)     NOT NULL,
-    gender      ENUM ('M','F')  NOT NULL,  -- Enumeration of either 'M' or 'F'  
+    first_name  VARCHAR(14)    NOT NULL,
+    last_name   VARCHAR(16)    NOT NULL,
+    gender      VARCHAR(1)     NOT NULL,  -- Enumeration of either 'M' or 'F'
     hire_date   DATE            NOT NULL,
     PRIMARY KEY (emp_no)                   -- Index built automatically on primary-key column
                                            -- INDEX (first_name)
@@ -62,7 +60,7 @@ CREATE TABLE titles (
     FOREIGN KEY (emp_no) REFERENCES employees (emp_no) ON DELETE CASCADE,
                          -- ON UPDATE CASCADE??
     PRIMARY KEY (emp_no, title, from_date)
-       -- This ensures unique combination. 
+       -- This ensures unique combination.
        -- An employee may hold the same title but at different period
 );
 

@@ -3,15 +3,27 @@
 * Please use `Maven2` basically
 
 ```
-$ git clone 
+$ git clone
 $ cd generic-dao-hibernate
 $ mvn package
-$ mvn jetty:run
+$ mvn spring-boot:run
 ```
 
-* Database Initialization
+* Test Database Initialization
 
-from console
+From console, `start` H2DB
+
+```
+$ mvn com.edugility:h2-maven-plugin:1.0:spawn
+```
+
+From console, `stop` H2DB
+
+```
+$ mvn com.edugility:h2-maven-plugin:1.0:stop
+```
+
+* Production Database Initialization
 
 ```
 mysql> create database sample character set utf8;
@@ -29,7 +41,7 @@ $ mvn flyway:migrate -Dflyway.configFile=flyway.properties
 $ sh -c "mvn jetty:run &"
 ```
 
-* Please find API documents page at http://localhost:8080/rest/v1/employee 
+* Please find API documents page at http://localhost:8080/rest/v1/employee
 
 ### Software information
 

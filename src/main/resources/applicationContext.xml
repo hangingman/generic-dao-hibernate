@@ -16,11 +16,11 @@
                             http://www.springframework.org/schema/security
                             http://www.springframework.org/schema/security/spring-security-4.1.xsd">
 
-	<!-- This will automatically locate any and all property files you have 
-		within your classpath, provided they fall under the META-INF directory. The 
-		located property files are parsed and their values can then be used within 
+	<!-- This will automatically locate any and all property files you have
+		within your classpath, provided they fall under the META-INF directory. The
+		located property files are parsed and their values can then be used within
 		application context files in the form of ${propertyKey}. -->
-	<context:property-placeholder location="classpath*:*.properties" />
+	<context:property-placeholder location="classpath*:application.properties" />
 
 	<!-- JNDI -->
 	<!-- <jee:jndi-lookup id="myDataSource" jndi-name="java:comp/env/jdbc/xxxxx" /> -->

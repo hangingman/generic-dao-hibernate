@@ -6,8 +6,17 @@ import javax.servlet.ServletContext;
 import javax.ws.rs.core.Context;
 
 import org.glassfish.jersey.server.ResourceConfig;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
+//@EnableAutoConfiguration
 public class RestContextV1 extends ResourceConfig {
+
+	// for spring-boot
+    public static void main(String[] args) {
+        SpringApplication.run(RestContextV1.class, args);
+    }
 
 	// @see http://stackoverflow.com/a/17324460/2565527
 	@Context
